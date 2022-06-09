@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="row center">
+        <div class="col-md-4 offset-md-4">
+            <div class="card card-body">
+                <h1>Updating Profile</h1>
+                <form action="/update/{{username.id}}" method="POST">
+                    <div class="form-group txt_field">
+                        <input type="text" name="fname" value="{{ username.fname }}" class="" required>
+                        <span></span>
+                        <label> First Name </label>
+                    </div>
+                    <div class="form-group txt_field">
+                        <input type="text" name="lname" value="{{ username.lname }}" class="" required>
+                        <span></span>
+                        <label> Last Name </label>
+                    </div>
+                    <div class="form-group txt_field">
+                        <input type="text" name="age" value="{{ username.age }}" class="" required>
+                        <span></span>
+                        <label> Age </label>
+                    </div>
+                    <div class="form-group txt_field">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Update
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
